@@ -1,8 +1,8 @@
 import cv2
 import datetime
 
-# cap = cv2.VideoCapture('vtest.avi')
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture('vtest.avi')
+# cap = cv2.VideoCapture(0)
 height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
 width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
 print(height)
