@@ -8,8 +8,16 @@ img2 = np.full((250, 500, 3), 255, dtype=np.uint8)
 img2 = cv2.rectangle(img2, (0, 0), (250, 250), (0, 0, 0), -1)
 # img2 = np.hstack((np.zeros((500,250,1), dtype=np.uint8), np.ones((500,250,1), dtype=np.uint8)*255))
 
+bitAND = cv2.bitwise_and(img2, img1)
+bitOR = cv2.bitwise_or(img2, img1)
+bitXOR = cv2.bitwise_xor(img2, img1)
+bitNOT1 = cv2.bitwise_not(img1)
+bitNOT2 = cv2.bitwise_not(img2)
+
 cv2.imshow("img1", img1)
 cv2.imshow("img2", img2)
+cv2.imshow("bitNOT1", bitNOT1)
+cv2.imshow("bitNOT2", bitNOT2)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
