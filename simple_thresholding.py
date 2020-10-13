@@ -18,6 +18,7 @@ _, th5 = cv2.threshold(img, 17, 255, cv2.THRESH_TOZERO_INV)
 titles = ['Original', 'BINARY', 'BINARY_INV', 'TRUNC', 'TOZERO', 'TOZERO_INV']
 images = [img, th1, th2, th3, th4, th5]
 
+
 for i in range(6):
     plt.subplot(2, 3, i + 1),plt.imshow(images[i],'gray')
     plt.title(titles[i])
